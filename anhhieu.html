@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>tingting</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="scrip.js"></script>
+    <style type="text/css">
+    	*.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none
+}
+    </style>
+</head>
+
+<body>
+    <div ng-app="appquerry">
+        <div style="width: 100%">
+            <div ng-controller="inputcol" style="width: 100%">
+                <textarea rows="20" placeholder="{{message}}" ng-model="so1"></textarea>
+                <button ng-click="delete()">Clear</button>
+                <textarea id="content" ng-model="change()" rows="5" style="width: 100%">{{ketqua}}</textarea>
+
+            </div>
+
+        </div>
+        
+    </div>
+    <button class="copy-text" data-clipboard-target="#content" href="#">Click to Copy</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+<script>
+	$(function(){
+  new Clipboard('.copy-text');
+});
+</script>
+
+</html>
